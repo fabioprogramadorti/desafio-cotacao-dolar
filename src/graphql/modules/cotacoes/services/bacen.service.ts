@@ -6,7 +6,7 @@ async function getCotacaoByDate(date: Date) {
 
   const response = await axios.get(baseUrl)
 
-  return response.data
+  return response.data.value
 }
 
 export default getCotacaoByDate
