@@ -1,15 +1,10 @@
 {
   "presets": [
-    "stage-2",
-    "env"
+    "@babel/env",
+    "@babel/typescript"
   ],
   "plugins": [
-    [
-      "transform-runtime",
-      {
-        "polyfill": false,
-        "regenerator": true
-      }
-    ]
+    "@babel/proposal-class-properties",
+    "@babel/proposal-object-rest-spread"
   ]
 }
