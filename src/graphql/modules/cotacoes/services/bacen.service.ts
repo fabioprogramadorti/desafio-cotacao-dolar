@@ -3,10 +3,14 @@ import axios from 'axios'
 async function getCotacaoByDate(date: String) {
 
   var baseUrl = `https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaDia(moeda='USD',dataCotacao='${date}')?$format=json`
+  try {
+    const response = await axios.get(baseUrl)
+    return response.data.value
 
-  const response = await axios.get(baseUrl)
+  } catch (error) {
+    return error
+  }
 
-  return response.data.value
 }
 
 export default getCotacaoByDate

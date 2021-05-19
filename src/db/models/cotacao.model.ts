@@ -27,4 +27,4 @@ const CotacaoSchema = new mongoose.Schema({
   },
 }, { timestamps: { createdAt: 'timestamp_da_requisição' } })
 
-export default mongoose.model('Cotacao', CotacaoSchema)
+export default mongoose.model('cotacoes', CotacaoSchema)

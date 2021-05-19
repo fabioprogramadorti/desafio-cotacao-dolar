@@ -8,20 +8,26 @@ const dbName = process.env.DB_NAME
 
 function dbInit() {
 
+  console.log(
+    dbHost,
+    dbUser,
+    dbPassword,
+    dbName,
+  )
+
   const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true
   }
 
-  var connectionString = `mongodb+srv://${dbUser}:${dbPassword}@${dbHost}/${dbName}`
+  var connectionString = `mongodb+srv://${dbUser}:${dbPassword}@${dbHost}/${dbName}?retryWrites=true&w=majority`
 
   mongoose.connect(connectionString, options)
     .then(res => {
       console.log('MongoDB connected successfuly')
     })
     .catch(err => {
-      console.log(err.message)
-      console.log(`An error occurred on the database connection: ${err.message}`)
+      console.error(`An error occurred on the database connection: ${err.message}`)
     })
 }
 
