@@ -8,15 +8,23 @@ interface Cotacao {
   tipoBoletim: string,
 }
 
-export let getLastCotacao = (cotacoes: Array<Cotacao>): Cotacao => {
+export class FiltrosDeCotacoes {
+  cotacoes: [Cotacao]
 
-  const ultimaCotacao = cotacoes.reduce((acc, item) => returnLast(acc, item), cotacoes[0])
-  return ultimaCotacao
-}
+  constructor(cotacoes: [Cotacao]) {
+    this.cotacoes = cotacoes
+  }
 
-let returnLast = (c1: Cotacao, c2: Cotacao): Cotacao => {
-  const date1 = new Date(c1.dataHoraCotacao)
-  const date2 = new Date(c2.dataHoraCotacao)
+  getLastCotacao = (): Cotacao => {
+    const ultimaCotacao = this.cotacoes.reduce((acc, item) => this.returnLast(acc, item), this.cotacoes[0])
+    return ultimaCotacao
+  }
 
-  return date1 > date2 ? c1 : c2
+  private returnLast = (c1: Cotacao, c2: Cotacao): Cotacao => {
+    const date1 = new Date(c1.dataHoraCotacao)
+    const date2 = new Date(c2.dataHoraCotacao)
+
+    return date1 > date2 ? c1 : c2
+  }
+
 }

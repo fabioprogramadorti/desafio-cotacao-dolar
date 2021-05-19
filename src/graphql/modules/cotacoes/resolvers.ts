@@ -1,5 +1,5 @@
 import getCotacaoByDate from './services/bacen.service'
-import { getLastCotacao } from '../../../utils/cotacao'
+import { FiltrosDeCotacoes } from '../../../utils/cotacao'
 import CotacaoModel from '../../../db/models/cotacao.model'
 
 interface CotacaoDate {
@@ -13,7 +13,10 @@ export default {
         var cotacoes = await getCotacaoByDate(date)
 
         // filtra a cotacao pelo maior horário
-        const ultimaCotacao = getLastCotacao(cotacoes)
+        const filtrosDeCotacoes = new FiltrosDeCotacoes(cotacoes)
+
+        const ultimaCotacao = filtrosDeCotacoes.getLastCotacao()
+        console.log(ultimaCotacao)
         await CotacaoModel.create({ ...ultimaCotacao })
 
         return ultimaCotacao
