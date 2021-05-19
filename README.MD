@@ -7,7 +7,7 @@
 
 ## 💻 Sobre o projeto
 
- Este projeto é feito utilizando Mongodb e o servidor graphql-yoga. A api utiliza Graphql para as requests. A aplicação se utiliza do Mongo Cloud como servidor de banco de dados.
+ Este projeto foi feito utilizando Mongodb e o servidor graphql-yoga. A aplicação se utiliza do Mongo Cloud como servidor de banco de dados.
 
 ---
 
@@ -15,14 +15,14 @@
 
 ### Pré-requisitos
 
-Antes de começar, você vai precisar ter instaladas em sua máquina as seguintes ferramentas:
+Antes de começar, você precisará ter instaladas em sua máquina as seguintes ferramentas:
 
 - [NodeJs - v14.+](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/)
 
 
 ### 🎲 Rodando a aplicação
-Na pasta rais do projeto execute os seguintes comandos
+Na pasta raiz do projeto execute os seguintes comandos
 
 ```bash
 
