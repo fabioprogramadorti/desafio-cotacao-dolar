@@ -1,8 +1,10 @@
 type CotacaoDolar {
+
   cotacaoCompra: Float,
   cotacaoVenda: Float,
+
 }
 
 type Query {
-	cotacaoDolar(date: String!): [CotacaoDolar]!
+	cotacaoDolar(date: String!): CotacaoDolar
 }

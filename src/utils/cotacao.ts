@@ -10,10 +10,8 @@ interface Cotacao {
 
 export function getLastCotacao(cotacoes: Array<Cotacao>) {
 
-
   const ultimaCotacao = cotacoes.reduce((acc, item) => returnLast(acc, item), cotacoes[0])
-
-  console.log(ultimaCotacao)
+  return ultimaCotacao
 }
 
 function returnLast(c1: Cotacao, c2: Cotacao): Cotacao {
