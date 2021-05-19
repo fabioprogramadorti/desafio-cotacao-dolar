@@ -1,5 +1,6 @@
 import getCotacaoByDate from './services/bacen.service'
 import { getLastCotacao } from '../../../utils/cotacao'
+
 interface CotacaoDate {
   date: String
 }
@@ -12,7 +13,7 @@ export default {
 
       // filtra a cotacao pelo maior horário
       const ultimaCotacao = getLastCotacao(cotacoes)
-      
+
       return ultimaCotacao
     }
   }
