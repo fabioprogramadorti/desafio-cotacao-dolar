@@ -19,6 +19,7 @@ Antes de começar, você precisará ter instaladas em sua máquina as seguintes 
 
 - [NodeJs - v14.+](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/)
+- [Docker](https://www.docker.com/get-started)
 
 
 ### 🎲 Rodando a aplicação
@@ -26,9 +27,10 @@ Na pasta raiz do projeto execute os seguintes comandos
 
 ```bash
 
-# Este comando instalará as dependências e vai subir o server
-yarn
-yarn dev
+# Estes comandos instalarão as dependências e vão subir o server
+yarn # instala as dependencias
+docker run --name mongo -p 27017:27017 -v ./data/db/data/db -d mongo mongod # sobe o docker do MongoDB
+yarn dev # inicializa o server
 
 ```
 
