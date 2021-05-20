@@ -7,7 +7,7 @@
 
 ## 💻 Sobre o projeto
 
- Este projeto foi feito utilizando Mongodb e o servidor graphql-yoga. A aplicação se utiliza do Mongo Cloud como servidor de banco de dados.
+ Este projeto foi feito utilizando MongoDB e o servidor graphql-yoga. A aplicação se utiliza do Docker para subir um banco de dados MongoDB.
 
 ---
 
