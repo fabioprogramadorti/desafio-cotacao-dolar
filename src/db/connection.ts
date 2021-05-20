@@ -6,7 +6,7 @@ const dbUser = process.env.DB_USER
 const dbPassword = process.env.DB_PASS
 const dbName = process.env.DB_NAME
 
-function dbInit() {
+export const dbInit = () => {
 
   console.log(
     dbHost,
@@ -30,5 +30,3 @@ function dbInit() {
       console.error(`An error occurred on the database connection: ${err.message}`)
     })
 }
-
-export { dbInit }

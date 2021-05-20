@@ -1,4 +1,4 @@
-import getCotacaoByDate from './services/bacen.service'
+import getCotacaoByDate from '../../services/bacen.service'
 import { FiltrosDeCotacoes } from '../../../utils/cotacao'
 import CotacaoModel from '../../../db/models/cotacao.model'
 
